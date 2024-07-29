@@ -4,6 +4,7 @@ from config import app
 from resources import UserRegister, UserLogin, PostResource, PostListResource
 from flasgger import Swagger
 
+
 api = Api(app)
 swagger = Swagger(app)
 
