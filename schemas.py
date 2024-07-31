@@ -1,15 +1,16 @@
-from config import ma
+from marshmallow_sqlalchemy import SQLAlchemyAutoSchema
 from models import User, Post
 
-class UserSchema(ma.SQLAlchemyAutoSchema):
+class UserSchema(SQLAlchemyAutoSchema):
     class Meta:
         model = User
         load_instance = True
 
-class PostSchema(ma.SQLAlchemyAutoSchema):
+class PostSchema(SQLAlchemyAutoSchema):
     class Meta:
         model = Post
         load_instance = True
+
 
 user_schema = UserSchema()
 users_schema = UserSchema(many=True)
